@@ -1,47 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UIRS Account Deletion Request</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.7; padding: 20px; max-width: 800px; margin: auto; color: #333; }
-    h1, h2 { color: #222; }
-    p { margin-bottom: 1em; }
-  </style>
-</head>
-<body>
-  <h1>UIRS Account and Data Deletion</h1>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UIRS — Account & Data Deletion Policy</title>
+    <meta
+      name="description"
+      content="How to request deletion of your account and personal data from the Unified Incident Response System (UIRS). Process, timeline, verification, retained records, and sample request."
+    />
+    <style>
+      /* Core layout & typography */
+      :root {
+        --bg: #f5f7fb;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #0f62fe;
+        --accent-2: #6c63ff;
+        --border: #e6eef8;
+        --success: #0f9d58;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: linear-gradient(180deg, var(--bg), #ffffff 80%);
+        color: #0f1724;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 32px auto;
+        padding: 28px;
+      }
+      header.hero {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        padding: 28px;
+        border-radius: 12px;
+        background: linear-gradient(
+          135deg,
+          rgba(12, 63, 168, 0.06),
+          rgba(108, 99, 255, 0.04)
+        );
+        box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+        border: 1px solid var(--border);
+      }
+      .hero-left {
+        flex: 1;
+      }
+      .title {
+        margin: 0 0 8px 0;
+        font-size: 28px;
+        color: #062244;
+      }
+      .subtitle {
+        margin: 0;
+        color: var(--muted);
+      }
+      .hero-right {
+        width: 160px;
+        text-align: right;
+        opacity: 0.95;
+      }
+      .card {
+        background: var(--card);
+        border-radius: 10px;
+        padding: 22px;
+        margin-top: 20px;
+        border: 1px solid var(--border);
+        box-shadow: 0 6px 18px rgba(11, 16, 35, 0.03);
+      }
+      h2 {
+        margin-top: 0;
+        color: #062244;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr 320px;
+          align-items: start;
+        }
+      }
+      .section-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .timeline {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .timeline li {
+        padding: 12px 0;
+        border-top: 1px dashed #eef5ff;
+      }
+      .kbd {
+        background: #eef6ff;
+        color: #062244;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 13px;
+      }
+      pre.template {
+        background: #0b1220;
+        color: #dbeafe;
+        padding: 14px;
+        border-radius: 8px;
+        overflow: auto;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+        font-size: 13px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      td,
+      th {
+        padding: 8px;
+        border-bottom: 1px solid #f3f6fb;
+        text-align: left;
+        font-size: 14px;
+      }
+      .cta {
+        display: inline-block;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .note {
+        background: #fff8e6;
+        border-left: 4px solid #ffcf6b;
+        padding: 12px;
+        border-radius: 6px;
+        color: #663c00;
+      }
+      footer {
+        margin-top: 26px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero card" role="banner" aria-labelledby="page-title">
+        <div class="hero-left">
+          <h1 id="page-title" class="title">UIRS — Account & Data Deletion</h1>
+          <p class="subtitle muted">
+            How to request permanent removal of your account and personal data
+            from the Unified Incident Response System (UIRS). This page
+            describes the scope, verification steps, what will be deleted, what
+            may be retained, timelines, and next steps.
+          </p>
+        </div>
+        <div class="hero-right">
+          <div class="kbd">Privacy & Data Rights</div>
+          <p class="muted" style="margin-top: 10px; font-size: 13px">
+            Please Contact
+            <a href="mailto:rogu.erdao.ui@phinmed.com"
+              >rogu.erdao.ui@phinmaed.com</a
+            >
+            for assistance with your data deletion request.
+          </p>
+        </div>
+      </header>
 
-  <p>This page explains the procedure for requesting the removal of an account and the personal data linked to it in the Unified Incident Response System (UIRS).</p>
+      <main class="grid">
+        <section class="card" aria-labelledby="how-to">
+          <div class="section-title">
+            <h2 id="how-to">How to Submit a Deletion Request</h2>
+          </div>
 
-  <h2>How to Submit a Deletion Request</h2>
-  <p>Send an email to rogu.erdao.ui@phinmaed.com with the subject line: Account Deletion Request.</p>
-  <p>Include the following details:</p>
-  <p>
-    • Full name<br>
-    • Registered email address<br>
-    • Registered phone number<br>
-  </p>
-  <p>Requests are verified to confirm identity before processing.</p>
+          <p class="muted">
+            UIRS is committed to respecting users’ rights to control their
+            personal data. If you wish to have your account and associated
+            personal data removed, submit a deletion request to our Data
+            Protection team. The following steps outline the submission,
+            verification, and execution process to ensure requests are handled
+            securely and in compliance with applicable law.
+          </p>
 
-  <h2>Data Removed After Approval</h2>
-  <p>The following data is erased after your request is approved:</p>
-  <p>
-    • Account profile<br>
-    • Contact information<br>
-    • Uploaded images<br>
-    • Uploaded audio<br>
-    • Incident reports linked to your identity<br>
-  </p>
+          <h3>Step-by-step submission</h3>
+          <ol>
+            <li>
+              <strong>Prepare your request:</strong> Include your full legal
+              name, the email address used to register with UIRS, your phone
+              number (if registered), and a short statement that you are
+              requesting account deletion.
+            </li>
+            <li>
+              <strong>Send the request:</strong> Email the request to
+              <a href="mailto:rogu.erdao.ui@phinmed.com" class="cta"
+                >rogu.erdao.ui@phinmaed.com</a
+              >. Use the subject line:
+              <em>UIRS Account Deletion Request — [Your Full Name]</em>.
+            </li>
+            <li>
+              <strong>Identity verification:</strong> For security, we will
+              verify your identity using one or more of the methods described
+              below.
+            </li>
+            <li>
+              <strong>Confirmation & processing:</strong> After verification,
+              you will receive a confirmation and an estimated completion date.
+              The deletion will proceed as described in this policy.
+            </li>
+          </ol>
 
-  <h2>Data Retained</h2>
-  <p>The system retains anonymized incident records for statistical and operational purposes. These records hold no link to your identity.</p>
+          <h3>Sample request template</h3>
+          <pre class="template" aria-label="Sample deletion request email">
+From: your.email@example.com
+To: rogu.erdao.ui@phinmaed.com
+Subject: UIRS Account Deletion Request — Jane Q. Citizen
 
-  <h2>Processing Time</h2>
-  <p>Personal data removal is completed within 30 days after request approval.</p>
+Hello,
 
-  <h2>Support</h2>
-  <p>For questions related to account removal or data retention, contact rogu.erdao.ui@phinmaed.com.</p>
-</body>
+I request permanent deletion of my UIRS account and any personal data associated with it. Details:
+• Full name: Jane Q. Citizen
+• Registered email: your.email@example.com
+• Registered phone (optional): +1-234-567-8900
+• Reason (optional): No longer using the service
+
+Please confirm receipt and inform me of any steps required to complete identity verification.
+
+Thank you,
+Jane Q. Citizen
+          </pre>
+
+          <h3>Identity verification</h3>
+          <p class="muted">
+            To protect privacy and prevent unauthorized deletions, UIRS will
+            verify the account owner prior to processing a deletion.
+            Verification may include:
+          </p>
+          <ul>
+            <li>
+              Email verification (confirmation sent to the registered address)
+            </li>
+            <li>Two-factor challenge if enabled on the account</li>
+            <li>
+              Submission of a small number of recent account activity details
+              (e.g., date of last login, recent report ID) to confirm ownership
+            </li>
+          </ul>
+
+          <h3>Eligibility</h3>
+          <p class="muted">
+            Account owners and authorized representatives may request deletion.
+            We may require additional documentation for legal representatives
+            acting on behalf of another individual.
+          </p>
+
+          <h3>What will be deleted</h3>
+          <p>
+            Subject to verification and any applicable legal obligations, UIRS
+            will remove personally identifiable data linked to your account,
+            including but not limited to:
+          </p>
+          <ul>
+            <li>Account profile information (name, photo, username)</li>
+            <li>Contact information (email addresses, phone numbers)</li>
+            <li>Uploaded media (images) that contain personal identifiers</li>
+            <li>Personal attachments and notes</li>
+            <li>
+              Incident reports that directly identify you; where an incident is
+              shared or co-authored, personal identifiers will be removed or
+              redacted
+            </li>
+          </ul>
+
+          <h3>What may be retained and why</h3>
+          <p>
+            In some situations, UIRS will retain limited or anonymized records
+            for legitimate business, legal, or safety purposes. Common reasons
+            include:
+          </p>
+          <ul>
+            <li>
+              Legal obligations such as law enforcement requests or preservation
+              orders
+            </li>
+            <li>
+              Retention of anonymized statistics, aggregated analytics, and
+              operational logs that do not identify you
+            </li>
+            <li>
+              Records required for fraud prevention, dispute resolution, or to
+              protect the rights and safety of others
+            </li>
+          </ul>
+
+          <div class="note">
+            Note: UIRS will not attempt to re-identify anonymized data after
+            deletion. Aggregated statistics used for system improvements will
+            not be linked to personal identifiers.
+          </div>
+
+          <h3>Processing time & timeline</h3>
+          <ul class="timeline">
+            <li>
+              <strong
+                >Receipt & acknowledgment (within 3 business days):</strong
+              >
+              We confirm receipt and outline verification steps.
+            </li>
+            <li>
+              <strong
+                >Verification (variable, typically 3–10 business days):</strong
+              >
+              Identity checks to ensure only authorized requests are processed.
+            </li>
+            <li>
+              <strong
+                >Deletion processing (up to 30 days after verification):</strong
+              >
+              Execution of deletion steps across primary systems and backups as
+              feasible.
+            </li>
+            <li>
+              <strong>Final confirmation:</strong> You will receive an email
+              confirming completion and explaining what was retained (if
+              anything) and why.
+            </li>
+          </ul>
+
+          <h3>Legal exceptions and holds</h3>
+          <p class="muted">
+            UIRS may decline or partially fulfill deletion requests when there
+            are legal obligations to retain data (e.g., court orders, regulatory
+            requirements), or when the data is necessary for ongoing
+            investigations or to protect public safety. In these cases we will:
+          </p>
+          <ul>
+            <li>Clearly explain the legal basis for retention</li>
+            <li>
+              Limit access and apply security controls while the data is
+              retained
+            </li>
+            <li>
+              Delete or anonymize the data as soon as the retention obligation
+              expires
+            </li>
+          </ul>
+
+          <h3>Appeals and corrections</h3>
+          <p>
+            If you disagree with the result of a deletion request, contact the
+            Data Protection team at
+            <a href="mailto:rogu.erdao.ui@phinmed.com"
+              >rogu.erdao.ui@phinmaed.com</a
+            >
+            with the subject "Appeal — Account Deletion". Provide the
+            confirmation reference included in the deletion notice. We will
+            review appeals promptly and provide a written response explaining
+            the outcome.
+          </p>
+        </section>
+
+        <aside>
+          <div class="card" aria-labelledby="quick-facts">
+            <h2 id="quick-facts">Quick Facts</h2>
+            <table>
+              <tr>
+                <th>Processing time</th>
+                <td>Up to 30 days after verification</td>
+              </tr>
+              <tr>
+                <th>Verification</th>
+                <td>Email, 2FA, or account activity proof</td>
+              </tr>
+              <tr>
+                <th>Retention</th>
+                <td>Anonymized stats may be retained</td>
+              </tr>
+              <tr>
+                <th>Contact</th>
+                <td>
+                  <a href="mailto:rogu.erdao.ui@phinmed.com"
+                    >rogu.erdao.ui@phinmaed.com</a
+                  >
+                </td>
+              </tr>
+            </table>
+
+            <h3 style="margin-top: 14px">FAQs</h3>
+            <p class="muted">
+              <strong>Can I get a copy of my data before deletion?</strong
+              ><br />Yes — request a data export prior to deletion. Exports will
+              be provided in a standard format and must be requested separately.
+            </p>
+
+            <p class="muted">
+              <strong>Will deletion affect others?</strong><br />Shared content
+              may be redacted or disassociated from your identity, but content
+              that includes other users may remain in anonymized or redacted
+              form.
+            </p>
+
+            <p class="muted">
+              <strong>Will backups be immediately deleted?</strong><br />Backups
+              are typically retained for operational reasons; personal
+              identifiers will be removed from primary systems, and backups will
+              be purged in accordance with our backup retention policy
+              (generally within 30–90 days).
+            </p>
+
+            <div style="margin-top: 14px">
+              <a
+                class="cta"
+                href="mailto:rogu.erdao.ui@phinmaed.com?subject=UIRS%20Account%20Deletion%20Request"
+                >Request deletion</a
+              >
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 16px">
+            <h3>Security & Accountability</h3>
+            <p class="muted">
+              All deletion requests are logged and audited. Only authorized
+              privacy team members may approve or carry out deletions. We
+              maintain records of processed requests to support accountability
+              and to comply with applicable legal obligations.
+            </p>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <p>
+          For questions or assistance, contact
+          <a href="mailto:rogu.erdao.ui@phinmaed.com"
+            >rogu.erdao.ui@phinmed.com</a
+          >. Replace this placeholder with your organization's official privacy
+          contact before publishing.
+        </p>
+        <p>
+          UIRS — Unified Incident Response System • Effective date: [Insert
+          Effective Date]
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
